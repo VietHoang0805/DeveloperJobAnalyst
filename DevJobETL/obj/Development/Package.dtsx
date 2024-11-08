@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="11/4/2024 6:19:00 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1066"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{BE0F45EE-4A2F-40E4-9643-E057692C23F0}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{2DD79337-B07D-4E4A-BE75-E842EF3FC80F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2177,179 +2177,6 @@
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination"
-                  componentClassID="Microsoft.OLEDBDestination"
-                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-                  description="OLE DB Destination"
-                  name="OLE DB Destination"
-                  usesDispositions="true"
-                  version="4">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[DIM_Experience]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1258</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">3</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepIdentity">false</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepNulls">false</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                      name="FastLoadMaxInsertCommitSize">2147483647</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[DevJobETL 2]"
-                      connectionManagerRefId="Package.ConnectionManagers[DevJobETL 2]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                      errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
-                      hasSideEffects="true"
-                      name="OLE DB Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[YearsCode]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="YearsCode"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YearsCode]"
-                          lineageId="Package\Sequence DIM\DIM_Experience\Aggregate.Outputs[Aggregate Output 1].Columns[YearsCode]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[YearsCodePro]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="YearsCodePro"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YearsCodePro]"
-                          lineageId="Package\Sequence DIM\DIM_Experience\Aggregate.Outputs[Aggregate Output 1].Columns[YearsCodePro]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CodingActivities]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="CodingActivities"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CodingActivities]"
-                          lineageId="Package\Sequence DIM\DIM_Experience\Aggregate.Outputs[Aggregate Output 1].Columns[CodingActivities]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DevType]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="DevType"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DevType]"
-                          lineageId="Package\Sequence DIM\DIM_Experience\Aggregate.Outputs[Aggregate Output 1].Columns[DevType]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OrgSize]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="OrgSize"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrgSize]"
-                          lineageId="Package\Sequence DIM\DIM_Experience\Aggregate.Outputs[Aggregate Output 1].Columns[OrgSize]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ExperienceID]"
-                          cachedDataType="i4"
-                          cachedName="ExperienceID"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ExperienceID]"
-                          lineageId="Package\Sequence DIM\DIM_Experience\Script Component.Outputs[Output 0].Columns[ExperienceID]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YearsCode]"
-                          dataType="wstr"
-                          length="255"
-                          name="YearsCode" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YearsCodePro]"
-                          dataType="wstr"
-                          length="255"
-                          name="YearsCodePro" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CodingActivities]"
-                          dataType="wstr"
-                          length="255"
-                          name="CodingActivities" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DevType]"
-                          dataType="wstr"
-                          length="255"
-                          name="DevType" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrgSize]"
-                          dataType="wstr"
-                          length="255"
-                          name="OrgSize" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ExperienceID]"
-                          dataType="i4"
-                          name="ExperienceID" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
                   refId="Package\Sequence DIM\DIM_Experience\Script Component"
                   componentClassID="Microsoft.ManagedComponentHost"
                   contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
@@ -3231,11 +3058,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   endId="Package\Sequence DIM\DIM_Experience\Aggregate.Inputs[Aggregate Input 1]"
                   name="Excel Source Output"
                   startId="Package\Sequence DIM\DIM_Experience\Excel Source.Outputs[Excel Source Output]" />
-                <path
-                  refId="Package\Sequence DIM\DIM_Experience.Paths[Output 0]"
-                  endId="Package\Sequence DIM\DIM_Experience\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  name="Output 0"
-                  startId="Package\Sequence DIM\DIM_Experience\Script Component.Outputs[Output 0]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -5217,143 +5039,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination"
-                  componentClassID="Microsoft.OLEDBDestination"
-                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-                  description="OLE DB Destination"
-                  name="OLE DB Destination"
-                  usesDispositions="true"
-                  version="4">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[DIM_LearningSources]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1258</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">3</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepIdentity">false</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepNulls">false</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                      name="FastLoadMaxInsertCommitSize">2147483647</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[DevJobETL 2]"
-                      connectionManagerRefId="Package.ConnectionManagers[DevJobETL 2]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                      errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
-                      hasSideEffects="true"
-                      name="OLE DB Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LearnCode]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="LearnCode"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LearnCode]"
-                          lineageId="Package\Sequence DIM\DIM_LearningSources\Aggregate.Outputs[Aggregate Output 1].Columns[LearnCode]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LearnCodeCoursesCert]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="LearnCodeCoursesCert"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LearnCodeCoursesCert]"
-                          lineageId="Package\Sequence DIM\DIM_LearningSources\Aggregate.Outputs[Aggregate Output 1].Columns[LearnCodeCoursesCert]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LearningSourcesID]"
-                          cachedDataType="i4"
-                          cachedName="LearningSourcesID"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LearningSourcesID]"
-                          lineageId="Package\Sequence DIM\DIM_LearningSources\Script Component.Outputs[Output 0].Columns[LearningSourcesID]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LearnCode]"
-                          dataType="wstr"
-                          length="255"
-                          name="LearnCode" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LearnCodeCoursesCert]"
-                          dataType="wstr"
-                          length="255"
-                          name="LearnCodeCoursesCert" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LearningSourcesID]"
-                          dataType="i4"
-                          name="LearningSourcesID" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
                   refId="Package\Sequence DIM\DIM_LearningSources\Script Component"
                   componentClassID="Microsoft.ManagedComponentHost"
                   contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
@@ -6234,11 +5919,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   endId="Package\Sequence DIM\DIM_LearningSources\Aggregate.Inputs[Aggregate Input 1]"
                   name="Excel Source Output"
                   startId="Package\Sequence DIM\DIM_LearningSources\LearningSources.Outputs[Excel Source Output]" />
-                <path
-                  refId="Package\Sequence DIM\DIM_LearningSources.Paths[Output 0]"
-                  endId="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  name="Output 0"
-                  startId="Package\Sequence DIM\DIM_LearningSources\Script Component.Outputs[Output 0]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -9654,191 +9334,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination"
-                  componentClassID="Microsoft.OLEDBDestination"
-                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-                  description="OLE DB Destination"
-                  name="OLE DB Destination"
-                  usesDispositions="true"
-                  version="4">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[DIM_TechSkills]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1258</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">3</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepIdentity">false</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepNulls">false</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                      name="FastLoadMaxInsertCommitSize">2147483647</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[DevJobETL 2]"
-                      connectionManagerRefId="Package.ConnectionManagers[DevJobETL 2]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                      errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
-                      hasSideEffects="true"
-                      name="OLE DB Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LanguageHaveWorkedWith]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="LanguageHaveWorkedWith"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LanguageHaveWorkedWith]"
-                          lineageId="Package\Sequence DIM\DIM_TechSkills\Aggregate.Outputs[Aggregate Output 1].Columns[LanguageHaveWorkedWith]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DatabaseHaveWorkedWith]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="DatabaseHaveWorkedWith"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DatabaseHaveWorkedWith]"
-                          lineageId="Package\Sequence DIM\DIM_TechSkills\Aggregate.Outputs[Aggregate Output 1].Columns[DatabaseHaveWorkedWith]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PlatformHaveWorkedWith]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="PlatformHaveWorkedWith"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlatformHaveWorkedWith]"
-                          lineageId="Package\Sequence DIM\DIM_TechSkills\Aggregate.Outputs[Aggregate Output 1].Columns[PlatformHaveWorkedWith]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WebframeHaveWorkedWith]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="WebframeHaveWorkedWith"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WebframeHaveWorkedWith]"
-                          lineageId="Package\Sequence DIM\DIM_TechSkills\Aggregate.Outputs[Aggregate Output 1].Columns[WebframeHaveWorkedWith]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ToolsTechHaveWorkedWith]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="ToolsTechHaveWorkedWith"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ToolsTechHaveWorkedWith]"
-                          lineageId="Package\Sequence DIM\DIM_TechSkills\Aggregate.Outputs[Aggregate Output 1].Columns[ToolsTechHaveWorkedWith]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NEWCollabToolsHaveWorkedWith]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="NEWCollabToolsHaveWorkedWith"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NEWCollabToolsHaveWorkedWith]"
-                          lineageId="Package\Sequence DIM\DIM_TechSkills\Aggregate.Outputs[Aggregate Output 1].Columns[NEWCollabToolsHaveWorkedWith]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TechskillID]"
-                          cachedDataType="i4"
-                          cachedName="TechskillID"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TechskillID]"
-                          lineageId="Package\Sequence DIM\DIM_TechSkills\Script Component.Outputs[Output 0].Columns[TechskillID]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LanguageHaveWorkedWith]"
-                          dataType="wstr"
-                          length="255"
-                          name="LanguageHaveWorkedWith" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DatabaseHaveWorkedWith]"
-                          dataType="wstr"
-                          length="255"
-                          name="DatabaseHaveWorkedWith" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlatformHaveWorkedWith]"
-                          dataType="wstr"
-                          length="255"
-                          name="PlatformHaveWorkedWith" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WebframeHaveWorkedWith]"
-                          dataType="wstr"
-                          length="255"
-                          name="WebframeHaveWorkedWith" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ToolsTechHaveWorkedWith]"
-                          dataType="wstr"
-                          length="255"
-                          name="ToolsTechHaveWorkedWith" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NEWCollabToolsHaveWorkedWith]"
-                          dataType="wstr"
-                          length="255"
-                          name="NEWCollabToolsHaveWorkedWith" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TechskillID]"
-                          dataType="i4"
-                          name="TechskillID" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
                   refId="Package\Sequence DIM\DIM_TechSkills\Script Component"
                   componentClassID="Microsoft.ManagedComponentHost"
                   contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
@@ -12555,11 +12050,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   endId="Package\Sequence DIM\DIM_TechSkills\Aggregate.Inputs[Aggregate Input 1]"
                   name="Excel Source Output"
                   startId="Package\Sequence DIM\DIM_TechSkills\TechSkills.Outputs[Excel Source Output]" />
-                <path
-                  refId="Package\Sequence DIM\DIM_TechSkills.Paths[Output 0]"
-                  endId="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  name="Output 0"
-                  startId="Package\Sequence DIM\DIM_TechSkills\Script Component.Outputs[Output 0]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -12733,155 +12223,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                               name="AggregationComparisonFlags">0</property>
                           </properties>
                         </outputColumn>
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination"
-                  componentClassID="Microsoft.OLEDBDestination"
-                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-                  description="OLE DB Destination"
-                  name="OLE DB Destination"
-                  usesDispositions="true"
-                  version="4">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[DIM_WorkEnvironment]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1258</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">3</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepIdentity">false</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepNulls">false</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                      name="FastLoadMaxInsertCommitSize">2147483647</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[DevJobETL 2]"
-                      connectionManagerRefId="Package.ConnectionManagers[DevJobETL 2]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                      errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
-                      hasSideEffects="true"
-                      name="OLE DB Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OpSysPersonal use]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="OpSysPersonal use"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OpSysPersonal use]"
-                          lineageId="Package\Sequence DIM\DIM_WorkEnvironment\Aggregate.Outputs[Aggregate Output 1].Columns[OpSysPersonal use]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OpSysProfessional use]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="OpSysProfessional use"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OpSysProfessional use]"
-                          lineageId="Package\Sequence DIM\DIM_WorkEnvironment\Aggregate.Outputs[Aggregate Output 1].Columns[OpSysProfessional use]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OfficeStackAsyncHaveWorkedWith]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="OfficeStackAsyncHaveWorkedWith"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OfficeStackAsyncHaveWorkedWith]"
-                          lineageId="Package\Sequence DIM\DIM_WorkEnvironment\Aggregate.Outputs[Aggregate Output 1].Columns[OfficeStackAsyncHaveWorkedWith]" />
-                        <inputColumn
-                          refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WorkEnvID]"
-                          cachedDataType="i4"
-                          cachedName="WorkEnvID"
-                          externalMetadataColumnId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WorkEnvID]"
-                          lineageId="Package\Sequence DIM\DIM_WorkEnvironment\Script Component.Outputs[Output 0].Columns[WorkEnvID]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OpSysPersonal use]"
-                          dataType="wstr"
-                          length="255"
-                          name="OpSysPersonal use" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OpSysProfessional use]"
-                          dataType="wstr"
-                          length="255"
-                          name="OpSysProfessional use" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OfficeStackAsyncHaveWorkedWith]"
-                          dataType="wstr"
-                          length="255"
-                          name="OfficeStackAsyncHaveWorkedWith" />
-                        <externalMetadataColumn
-                          refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WorkEnvID]"
-                          dataType="i4"
-                          name="WorkEnvID" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -15604,11 +14945,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   endId="Package\Sequence DIM\DIM_WorkEnvironment\Aggregate.Inputs[Aggregate Input 1]"
                   name="Excel Source Output"
                   startId="Package\Sequence DIM\DIM_WorkEnvironment\WorkEnvironment.Outputs[Excel Source Output]" />
-                <path
-                  refId="Package\Sequence DIM\DIM_WorkEnvironment.Paths[Output 0]"
-                  endId="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  name="Output 0"
-                  startId="Package\Sequence DIM\DIM_WorkEnvironment\Script Component.Outputs[Output 0]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -15639,14 +14975,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 2"
           DTS:To="Package\Sequence DIM\DIM_Experience" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Sequence DIM.PrecedenceConstraints[Constraint 3]"
-          DTS:CreationName=""
-          DTS:DTSID="{3A5963BD-E58A-4DFB-A0CC-18A07F882874}"
-          DTS:From="Package\Sequence DIM\DIM_Experience"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 3"
-          DTS:To="Package\Sequence DIM\DIM_LearningSources" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
@@ -15733,7 +15061,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         <NodeLayout
           Size="188,42"
           Id="Package\Sequence DIM\DIM_WorkEnvironment"
-          TopLeft="377,56" />
+          TopLeft="376,54" />
         <EdgeLayout
           Id="Package\Sequence DIM.PrecedenceConstraints[Constraint]"
           TopLeft="142,72.5">
@@ -15758,18 +15086,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence DIM.PrecedenceConstraints[Constraint 1]"
-          TopLeft="334,74.5">
+          TopLeft="334,73.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="43,0"
+              EndConnector="42,0"
               Start="0,0"
-              End="35.5,0">
+              End="34.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="35.5,0" />
+                    End="34.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15780,64 +15108,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence DIM.PrecedenceConstraints[Constraint 2]"
-          TopLeft="471,98">
+          TopLeft="470,96">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-45.5,111"
+              EndConnector="-44.5,113"
               Start="0,0"
-              End="-45.5,103.5">
+              End="-44.5,105.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.5" />
+                    End="0,52.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,51.5"
-                    Point2="0,55.5"
-                    Point3="-4,55.5" />
+                    Point1="0,52.5"
+                    Point2="0,56.5"
+                    Point3="-4,56.5" />
                   <mssgle:LineSegment
-                    End="-41.5,55.5" />
+                    End="-40.5,56.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-41.5,55.5"
-                    Point2="-45.5,55.5"
-                    Point3="-45.5,59.5" />
+                    Point1="-40.5,56.5"
+                    Point2="-44.5,56.5"
+                    Point3="-44.5,60.5" />
                   <mssgle:LineSegment
-                    End="-45.5,103.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence DIM.PrecedenceConstraints[Constraint 3]"
-          TopLeft="348,230">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-112,-8"
-              Start="0,0"
-              End="-104.5,-8">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-52,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-52,0"
-                    Point2="-56,0"
-                    Point3="-56,-4" />
-                  <mssgle:LineSegment
-                    End="-56,-4" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-56,-4"
-                    Point2="-56,-8"
-                    Point3="-60,-8" />
-                  <mssgle:LineSegment
-                    End="-104.5,-8" />
+                    End="-44.5,105.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15966,32 +15260,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Sequence DIM\DIM_Experience\OLE DB Destination"
-          TopLeft="554,284" />
-        <EdgeLayout
-          Id="Package\Sequence DIM\DIM_Experience.Paths[Output 0]"
-          TopLeft="454,306.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="100,0"
-              Start="0,0"
-              End="92.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="92.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -16060,44 +15328,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                     Point3="10,30" />
                   <mssgle:LineSegment
                     End="10,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination"
-          TopLeft="599,276" />
-        <EdgeLayout
-          Id="Package\Sequence DIM\DIM_LearningSources.Paths[Output 0]"
-          TopLeft="476,281">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="123,16"
-              Start="0,0"
-              End="115.5,16">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="57.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="57.5,0"
-                    Point2="61.5,0"
-                    Point3="61.5,4" />
-                  <mssgle:LineSegment
-                    End="61.5,12" />
-                  <mssgle:CubicBezierSegment
-                    Point1="61.5,12"
-                    Point2="61.5,16"
-                    Point3="65.5,16" />
-                  <mssgle:LineSegment
-                    End="115.5,16" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -16321,32 +15551,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination"
-          TopLeft="504,293" />
-        <EdgeLayout
-          Id="Package\Sequence DIM\DIM_TechSkills.Paths[Output 0]"
-          TopLeft="412,312.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="92,0"
-              Start="0,0"
-              End="84.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="84.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -16423,44 +15627,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination"
-          TopLeft="521,322" />
-        <EdgeLayout
-          Id="Package\Sequence DIM\DIM_WorkEnvironment.Paths[Output 0]"
-          TopLeft="410,332">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="111,11"
-              Start="0,0"
-              End="103.5,11">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="51.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="51.5,0"
-                    Point2="55.5,0"
-                    Point3="55.5,4" />
-                  <mssgle:LineSegment
-                    End="55.5,7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="55.5,7"
-                    Point2="55.5,11"
-                    Point3="59.5,11" />
-                  <mssgle:LineSegment
-                    End="103.5,11" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -16518,58 +15684,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Sequence DIM\DIM_Profile\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence DIM\DIM_TechSkills\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence DIM\DIM_WorkEnvironment\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence DIM\DIM_Experience\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence DIM\DIM_LearningSources\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
