@@ -1,10 +1,4 @@
-  Truncate table DIM_Experience 
-  Truncate table DIM_LearningSources
-  Truncate table DIM_Profile
-  Truncate table DIM_TechSkills
-  Truncate table DIM_WorkEnvironment
-
--- 1. Số lượng ứng viên theo quốc gia
+﻿-- 1. Số lượng ứng viên theo quốc gia
 SELECT Country, COUNT(ProfileID) AS TotalApplicants
 FROM DIM_Profile
 GROUP BY Country
